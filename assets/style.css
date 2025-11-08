@@ -1,0 +1,164 @@
+/* Display */
+/* Size , width, height */
+/* Margin - Padding */
+/* Border */
+/* Background - Color */
+
+h1,h2,h3,h4,h5,h6
+{
+    margin: 0;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(234, 234, 234);
+}
+
+/**** HEADER ****/
+header
+{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+#nav-top
+{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    background-color: rgb(19, 25, 33);
+}
+
+#div-search
+{
+    display: flex;
+    transition: outline 0.2s ease;
+    outline: 3px solid transparent;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#div-search:focus-within {
+    /* Sử dụng outline (tốt hơn border vì không làm xê dịch bố cục) */
+    outline: 3px solid orange; 
+    /* Đảm bảo border cũ được giữ nguyên hoặc bị xóa */
+    border-color: transparent; 
+}
+
+#div-search input[type = 'text']
+{
+    padding-left: 1em;
+    padding-right: 1em;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    width: 50em;
+}
+
+#div-search select
+{
+    border: none;
+    outline: none;
+    background-color: #eee;
+}
+
+#div-search button
+{
+    border: none;
+    outline: none;
+    background-color: #eee;
+    width: 50px;
+}
+
+
+
+#nav-bottom
+{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(35, 47, 62);
+    color: #bbb;
+}
+
+#nav-bottom .btn-category
+{
+    cursor: pointer;
+    padding: 5px;
+}
+
+#nav-bottom .btn-category:hover
+{
+    background-color: rgb(65, 87, 114);
+}
+
+
+/**** MAIN ****/
+main
+{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 15px 15px;
+    overflow: auto;
+}
+
+.item
+{
+    position: relative;
+}
+
+.item h5
+{
+    font-weight: normal;
+}
+
+.item-new-tag
+{
+    position: absolute;
+    display: none;
+    padding: 3px;
+    background-color: limegreen;
+    color: white;
+}
+
+.new-true
+{
+    display: block;
+}
+
+.item-category
+{
+    font-weight: bold;
+    color: blueviolet;
+}
+
+.item-image
+{
+    width: 100%;  
+    aspect-ratio: 4 / 3;
+    background-color: white;
+    overflow: hidden;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-image img
+{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    display: block;
+}
+
+footer
+{
+    border-top: 1px solid #ccc;
+    text-align: center;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link id="link" rel="stylesheet" type="text/css" href="assets/style.css">
+    </head>
+    <body>
+        <header>
+            <div id="nav-top">
+                <div id="div-logo">
+                    <a href="#" id="btn-logo">
+                        <span id="img-logo">43434</span>
+                    </a>
+                </div>
+                <div id="div-demo">
+                    <h5>Demo for</h5>
+                    <h4>Hybird Taxonomy Framework</h4>
+                </div>
+                <div id="div-search">
+                    <select id="category-box" onchange="recommend(null)">
+                        <option>All</option>
+                        <option>Amazon Devices</option>
+                        <option>Appliances</option>
+                        <option>Arts, Crafts & Sewing</option>
+                        <option>Automotive</option>
+                        <option>Baby</option>
+                        <option>Books</option>
+                        <option>Buy A Kindle</option>
+                        <option>Camera & Photo</option>
+                        <option>Car Electronics</option>
+                        <option>Cell Phones & Accessories</option>
+                        <option>Collectible Coins</option>
+                        <option>Entertainment</option>
+                        <option>Gift Cards</option>
+                        <option>Gps & Navigation</option>
+                        <option>Grocery</option>
+                        <option>Industrial & Scientific</option>
+                    </select>
+                    <input id="txt-search" type="text" onkeydown="recommend(event)">
+                    <button onclick="recommend(null)"></button>
+                </div>
+                <div>
+                    AAAAA
+                </div>
+                <div>
+                    BBBBB
+                </div>
+            </div>
+            <div id="nav-bottom">
+                <span class="btn-category" onclick="recommend_by_category(event)">Amazon Devices</span>
+                <span class="btn-category" onclick="recommend_by_category(event)">Appliances</span>
+                <span class="btn-category" onclick="recommend_by_category(event)">Arts, Crafts & Sewing</span>
+                <span class="btn-category" onclick="recommend_by_category(event)">Automotive</span>
+                <span class="btn-category" onclick="recommend_by_category(event)">Baby</span>
+                <span class="btn-category" onclick="recommend_by_category(event)">Books</span>
+                <span class="btn-category" onclick="recommend_by_category(event)">Buy A Kindle</span>
+                <span class="btn-category" onclick="recommend_by_category(event)">Camera & Photo</span>
+            </div>
+            
+        </header>
+        <main id="item-container">
+            <div>
+                <div>
+
+                </div>
+                <img src="https://m.media-amazon.com/images/I/81Iq+LsctsL._AC_SF226,226_QL85_.jpg">
+                <h5>NAME</h5>
+                <h5>CATE</h5>
+                <h5>FEA</h5>
+            </div>
+        </main>
+        <footer>
+            FOOTER
+        </footer>
+
+        <script type="text/template" id="item-template">
+            <div class="item">
+                <h5 class="item-new-tag new-{{is_new}}">New</h5>
+                <div class="item-image">
+                    <img src="{{image}}">
+                </div>
+                <h5 class="item-category">{{main_category}}</h5>
+                <h5 class="item-title">{{title}}</h5>
+                <h5 class="item-features">{{features}}</h5>
+                <h5></h5>
+            </div>
+        </script>
+
+        <script type="text/javascript" src="assets/index.js?v=4"></script>
+
+        <script>
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.type = "text/css";
+            link.href = "assets/style.css?v=" + Date.now();
+            document.head.appendChild(link);
+        </script>
+    </body>
+</html>
+
